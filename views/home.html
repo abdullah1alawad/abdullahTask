@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+    if(!isset($_SESSION['family'])){
+    ?>
+    <a href="/abdullahTask/family-form">family form</a><br>
+    <?php }
+    else{
+        foreach($_SESSION['family'] as $key=>$val)
+        {
+            if($key=='employee')
+            {
+                if($val==1)
+                    $val='not employee';
+                else
+                    $val='employee';
+            }
+            echo $key.'=>'.$val . '<br>';
+        }
+            echo '<br>';
+    ?>
+    <a href="add-land">add land</a>
+    <?php
+    }
+     ?>
+    <br>
+    <a href="update-family">update</a>
+    <br>
+    <a href="delete-family">delete</a>
+    <hr>
+    <a href="family-city">show all families in specific city</a>
+    <hr>
+    <a href="show-land">show all lands that you have</a>
+    <hr>
+     <br>
+
+    <a href="family-plant-type">show all family by plant type </a>
+
+    <hr>
+    <a href="family-productivity"> show families have productivity you choose </a>
+    <hr>
+    <a href="family-profit">show family profits</a>
+    <hr>
+    <a href="/abdullahTask/logout">logout</a>
+</body>
+</html>

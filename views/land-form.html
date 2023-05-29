@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+
+        plant type : <select name="land-type" id="">
+            <?php
+                foreach($args as $val)
+                    echo '<option>'.$val.'</option>';
+            ?>
+        </select>
+        <br>
+        productivity : <input type="number" name="prod"><br>
+        profit : <input type="number" name="profit"><br>
+        <input type="submit"><br>
+    </form>
+    <a href="\abdullahTask\">home</a>
+</body>
+</html>
